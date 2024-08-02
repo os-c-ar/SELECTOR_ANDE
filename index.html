@@ -1,0 +1,342 @@
+
+<!-- saved from url=(0079)http://www.inthem4trix.com/pages/StaticMixerSelector_1/StaticMixerSelector.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato ANDE</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/myStyle.css"> 
+</head>
+<body>
+
+    <div class="container-1">
+    
+        <div class="flex-box-container-1">
+            
+            <h3>    
+            <img id="logo-opt-ppal" src="./IMG/logo-nfs.png" height="50" alt=""> 
+            Selector Sistema de Dosificación Contrato ANDE
+            </h3>
+    
+        </div>
+    </div>
+
+
+    <div class="container-2">
+        <div class="flex-box-container-2">
+            <div id="informacion" class="flex-box-informacion">  
+
+                <h7>Ingrese la Siguiente Información:</h7><br><br>               
+                    
+                <label> Caudal máx (GPD):
+                    <select name="CaudalMax" id="Caudal_max" onchange="mostrarSistemas()">
+                        <option value="0">Seleccionar</option>
+                        <option value="1">100 GPD</option>
+                        <option value="2">20 GPD</option>
+                            
+                    </select>
+                </label> 
+
+
+                <label> Número de bombas:
+                    <select name="Nbombas" id="N_bombas" onchange="mostrarSistemas()">
+                        <option value="0">Seleccionar</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                            
+                    </select>
+                </label>
+                
+                <label> Presión Inyección (psi):                   
+                        <select name="Pmax" id="P_max" onchange="mostrarSistemas()">
+                            <option value="0">Seleccionar</option>
+                            <option value="1">300psi </option>
+                            <option value="2">600psi</option> 
+                            <option value="3">900psi</option>    
+                            <option value="4">1500psi</option>                                   
+                        </select>
+
+                </label>
+
+                <label> Clasificación de Área:
+                    <select name="ClasificacionArea" id="Class_Area" onchange="mostrarSistemas()">
+                        <option value="0">Seleccionar</option>
+                        <option value="1">No Clasificada</option>
+                        <option value="2">CL1 Div2Gr C,D</option>                                            
+                    </select>
+                </label>
+
+                <label> Transmisor de Presión:
+                    <select name="TransPresion" id="Trans_Presion" onchange="mostrarSistemas()">
+                        <option value="0">Seleccionar</option>
+                        <option value="1">Si</option>
+                        <option value="2">No</option>                                            
+                    </select>
+                </label>
+
+
+                <!--
+                
+                            
+                <label for="Densidad (kg/L)">
+                    Densidad (kg/L): <input type="number" id="densidad" name="densidad" value="1.0" required="" onchange="MX_Calculator()">
+                </label> 
+
+                <label for="Viscosidad (cP)">
+                    Viscosidad (cP): <input type="number" name="viscosidad" id="viscosidad" value="1.0" required="" onchange="MX_Calculator()">
+                </label>
+            
+                                
+                <label> Diámetro (in):
+                    <select name="diametro" id="diametro" onchange="MX_Calculator()">
+                        <option value="0.5">1/2"</option>
+                        <option value="0.75">3/4"</option>
+                        <option value="1.0">1"</option>
+                        <option value="1.5"> 1 1/2"</option>
+                        <option value="2.0">2"</option>
+                        <option value="3.0">3"</option>
+                        <option value="4.0">4"</option>
+                        <option value="6.0">6"</option>
+                        <option value="8.0">8"</option>
+                        <option value="10.0">10"</option>
+                        <option value="12.0">12"</option>
+                        <option value="14.0">14"</option>
+                        <option value="16.0">16"</option>
+                    </select>
+                </label>
+               
+
+
+                <label> Material:
+                    <select name="material" id="material" onchange="MX_Calculator()">
+                        <option value="2">304SS</option>
+                        <option value="3">316SS</option>
+                        <option value="4">PVC</option>
+                        <option value="1">Carbón Steel</option>
+                    </select>
+                </label>
+                
+                        
+                <label>
+                    Máx Caida Presión (psi) :<input type="number" id="MaxCaidaPresion" name="MaxCaidaPresion" value="5" required="">  
+                </label>
+                
+
+                
+
+                <form>
+                    <fieldset>
+                        <label>Conexión
+                            <select name="conexion" id="conexion" onchange="MX_Calculator()">
+                                <option value="NPT">Roscada</option>
+                                <option value="SO">Bridada</option>
+                                <option value="CL">Sanitaria</option>
+                            </select>
+                        </label>
+    
+                        <label>Rating
+                            <select name="rating" id="rating" onchange="MX_Calculator()">
+                                <option value="1">150#</option>
+                                <option value="2">300#</option>
+                                <option value="3">600#</option>
+                            </select>
+                        </label>
+    
+                        <label>Material Elementos
+                            <select name="materialElementos" id="materialElementos" onchange="MX_Calculator()">
+                                <option value="2">304SS (Estandar)</option>
+                                <option value="3">316SS</option>
+                                <option value="4">304SS + Fibra de vidrio</option>
+                                
+                            </select>
+                        </label>
+    
+                        <label>Unión
+                            <select name="union" id="union" onchange="MX_Calculator()">
+                                <option value="">Sin</option>
+                                <option value="B"> Boquilla 1/2"</option>
+                                <option value="B20">Boquilla 3/4"</option>
+                                <option value="B25">Boquilla 1"</option>
+                                <option value="B40">Boquilla 1.5"</option>                          
+                            </select>
+                        </label>
+                    -->
+    
+                        
+    
+                    </fieldset>
+                </form>
+
+
+               
+                
+               
+
+            </div> <!--Cierre Div Info-->
+
+            <div id="resultadosDimensionamiento" class="flex-box-resultados">  
+                <h7>Descripción:</h7><br><br>
+
+
+                <!-- 
+
+                <form>
+                    <fieldset>
+                      <legend>Resultados Dimensionamiento</legend>
+
+                        <label> 
+                          Velocidad (m/s): &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="V" value="0">1.17</h7>
+                        </label>
+
+                        <label> 
+                            Numero de Reynolds: &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="reynolds" value="0">7916</h7>
+                        </label>
+
+                        <label> 
+                            Número de Elementos: &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="NumeroElementos" value="0">6</h7>
+                        </label>
+
+                        <label> 
+                            Longitud (mm): &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="Longitud" value="0">1266</h7>
+                        </label>
+
+                        <label> 
+                            Perdida de presión (psi): &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="PerdidaPresion" value="0">1.26</h7>
+                        </label>
+                      
+                    </fieldset>
+
+                    
+                </form>
+
+                -->
+
+                <button class="btn btn-primary" id="buttonCalculate" onclick="mostrarSistemas()"> Mostrar </button>
+
+                <h5 id="Espacio" class="alarma"> <br> </h5>
+                <h5 id="alarmaVelocidad" class="alarma"></h5>
+                <h5 id="alarmaPresion" class="alarma"></h5>
+
+
+
+            </div> <!--Cierre de div resultados dimensionamiento-->
+        </div> <!--Cierre flex-box-comtainer 2  que contiene Info y resultados-->
+        <h2>Tabla de datos</h2>
+    </div> <!--Cierre comtainer 2  que contiene flex box container 1 y 2Info y resultados-->
+
+    
+    
+  
+    <div class="container-3">
+
+        
+
+<!--
+
+
+        <table class="tableResults">
+            <tbody><tr><th>Descripción</th>
+            <th>Modelo</th>
+            <th>Precio de lista</th>
+            <th>Moneda</th>
+            <th>Desc</th>
+            <th>Qty</th>
+            <th>und</th>
+            <th>V. Unit</th>
+            <th>V. Parcial</th>
+            <th> W. Unit (kg)</th>
+            <th>W. Parcial (kg)</th>
+
+            </tr><tr>
+            <td id="tdDescription">Mezclador Estático, 8 in , Conexión:NPT , Rating:150# , Material Cuerpo:304SS, Material Elementos:304SS, Número de Elementos: 6  </td>
+            <td id="tdModel">MX800NPT1226</td>
+            <td id="tdPriceL">0</td>
+            <td id="tdMoneda">USD</td>
+            <td id="tdDiscount">0.55</td>
+            <td id="tdQty">1</td>
+            <td id="tdUnidades">und</td>
+            <td id="tdUnitaryPrice">0</td>
+            <td id="tdParcialPrice">0</td>
+            <td id="tdUnitaryWeight">0</td>
+            <td id="tdParcialWeight">0</td>
+            </tr>
+
+
+        </tbody></table>
+          -->
+
+
+         
+
+          
+<table id="sistemaANDETable">
+    <thead>
+      <tr>
+        <th>Codigo</th>
+        <th>Caudal Max</th>
+        <th>Número Bombas</th>
+        <th>Presion máx</th>
+        <th>Clasificación</th>
+        <th>PIT</th>
+        <th>Precio(USD)</th>
+        <!-- Aquí añade más <th> según las propiedades de tus objetos -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí se insertarán las filas con datos dinámicamente -->
+    </tbody>
+  </table>
+
+ 
+
+
+    </div>
+
+    
+    <!-- 
+
+    <div class="container-4" id="resultadoImagen">
+
+               
+        <label> Fluido:
+            <select name="Fluido" id="diametro" onchange="MX_Calculator()">
+                <option value="1"> Rompedor Directo</option>
+                <option value="2"> Rompedor Inverso</option>
+                <option value="3"> Coagulante</option>
+                <option value="4"> Polímero Fluculante</option> 
+                <option value="5"> Otro</option>                         
+            </select>
+        </label>
+
+         
+        <form>
+            <fieldset>
+                 
+                <h7> Modelo Novatec:</h7>
+                <h4 id="MODELO" value="MX">SD-XX-XX-XXX</h4>
+                <h7> Modelo ANDE:</h7>
+                <h4 id="MODELO_OPT" value="MX">71500197625</h4>
+              
+
+            </fieldset>
+        </form>
+        </div>
+
+     -->
+   
+
+    <div class="container-5" id="resultadoLinks">
+
+        <a href="./FILES/Sistema Dosificacion Portatil Dosiport_Contrato ANDE CW140011-Equipos.pdf" font=""> Catalogo </a> <br>
+       
+
+
+    </div>
+  
+  
+
+    
+    <script src="./JS/sistemasAnde.js"> </script>
+
+
+</body></html>
